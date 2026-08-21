@@ -25,17 +25,12 @@ set -o pipefail
 set -o errtrace
 shopt -s inherit_errexit
 shopt -s shift_verbose
+export LC_ALL=C
 
-## helper-scripts is a SIBLING package, so the source= path only resolves when
-## the whole packages/ tree is present. CI checks out this repo alone, where it
-## does not exist -- hence the SC1091 disable alongside it. The source= is still
-## worth keeping: it lets shellcheck follow the file in a full-tree checkout.
 # shellcheck source=../../../../kicksecure/helper-scripts/usr/libexec/helper-scripts/as_root.sh
-# shellcheck disable=SC1091
-source /usr/libexec/helper-scripts/as_root.sh
+source "${HELPER_SCRIPTS_PATH:-}"/usr/libexec/helper-scripts/as_root.sh
 # shellcheck source=../../../../kicksecure/helper-scripts/usr/libexec/helper-scripts/has.sh
-# shellcheck disable=SC1091
-source /usr/libexec/helper-scripts/has.sh
+source "${HELPER_SCRIPTS_PATH:-}"/usr/libexec/helper-scripts/has.sh
 
 as_root
 
@@ -106,7 +101,7 @@ fi
 
 line_to_add_maybe="nameserver ${dns_server}"
 
-if grep -q -- "^${line_to_add_maybe}\$" /etc/resolv.conf ; then
+if grep --quiet -- "^${line_to_add_maybe}\$" /etc/resolv.conf ; then
    true "INFO: No need to add. line_to_add_maybe already in /etc/resolv.conf."
    exit 0
 fi
