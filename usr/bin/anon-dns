@@ -23,14 +23,12 @@ set -o pipefail
 set -o errtrace
 shopt -s inherit_errexit
 shopt -s shift_verbose
+export LC_ALL=C
 
 # shellcheck source=../../../../kicksecure/helper-scripts/usr/libexec/helper-scripts/as_root.sh
-## TODO: Only run shellcheck when in a full derivative-maker source tree.
-# shellcheck disable=SC1091
-source /usr/libexec/helper-scripts/as_root.sh
+source "${HELPER_SCRIPTS_PATH:-}"/usr/libexec/helper-scripts/as_root.sh
 # shellcheck source=../../../../kicksecure/helper-scripts/usr/libexec/helper-scripts/has.sh
-# shellcheck disable=SC1091
-source /usr/libexec/helper-scripts/has.sh
+source "${HELPER_SCRIPTS_PATH:-}"/usr/libexec/helper-scripts/has.sh
 
 as_root
 
@@ -82,7 +80,7 @@ fi
 
 line_to_add_maybe="nameserver ${dns_server}"
 
-if grep -q -- "^${line_to_add_maybe}\$" /etc/resolv.conf ; then
+if grep -- "^${line_to_add_maybe}\$" /etc/resolv.conf >/dev/null 2>&1; then
    true "INFO: No need to add. line_to_add_maybe already in /etc/resolv.conf."
    exit 0
 fi
