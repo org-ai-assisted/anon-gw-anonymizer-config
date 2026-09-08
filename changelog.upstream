@@ -1,3 +1,68 @@
+commit f62fd539567c17f8b051a009da00899b99d135b3
+Merge: aa61f05 5569a48
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Sep 8 10:20:00 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit 5569a48bdf49c4e711968c8ad8686be39b3c8395
+Merge: 39a1bf3 aa61f05
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Sep 6 01:21:40 2026 -0400
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit 39a1bf3f7bfea560454f64257bd02d9bd8c9e616
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Sep 6 00:33:58 2026 -0400
+
+    Fix use of --quiet with grep
+
+commit 072f72b4c5171ee0209fb940154da9f2d74f2584
+Merge: 08f205b ababd1d
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Sep 6 00:28:18 2026 -0400
+
+    Merge branch 'ai' into arraybolt3/trixie
+
+commit ababd1d28200b7fe256672ec0c0f7cd64de5823f
+Author: assisted-by-ai (Bot Account) (Machine Account) <228987186+assisted-by-ai@users.noreply.github.com>
+Date:   Mon Aug 24 23:30:57 2026 -0400
+
+    ci: drop orphaned consumer-secrets-audit.yml (reusable decommissioned)
+
+commit 38469cd3c11441a7796cc10b202476c02f0b5c36
+Author: claude (dev272 e8b76afb-795c-4739-8ebd-023de854021e) <noreply@anthropic.com>
+Date:   Fri Aug 21 05:03:35 2026 -0400
+
+    anon-gw-anonymizer-config: drop redundant duplicate 'set -o pipefail'; complete R-010 strict block
+
+    - Remove the redundant second 'set -o pipefail' repeated after 'shopt -s
+      shift_verbose'; add 'export LC_ALL=C' to complete the R-010 block.
+
+    Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+commit bfacd97f754b9f76ccb95ade187d6defd1cf5b6d
+Author: claude (dev272 e8b76afb-795c-4739-8ebd-023de854021e) <noreply@anthropic.com>
+Date:   Fri Aug 21 04:40:55 2026 -0400
+
+    anon-gw-anonymizer-config: source helper-scripts via HELPER_SCRIPTS_PATH, drop SC1091 disable
+
+    - usr/bin/anon-server-to-client-install, onion-grater-remove, anon-auth-autogen,
+      onion-grater-add, anon-dns: use
+      source "${HELPER_SCRIPTS_PATH:-}"/usr/libexec/helper-scripts/<f>;
+      drop the dead '# shellcheck disable=SC1091' and the stale sibling note.
+    - completed pre-existing whole-file style debt: add strict-block
+      'export LC_ALL=C' (R-010) to all five; anon-dns grep -q -> --quiet (R-161).
+
+    Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+commit aa61f05f7bbfd5d506de7bf2a87e8d429855076e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Aug 17 04:58:24 2026 +0000
+
+    bumped changelog version
+
 commit 68ab4b6b7a68e5fbda0c782afd4e820e2701ae76
 Merge: 74af254 08f205b
 Author: Patrick Schleizer <adrelanos@whonix.org>
