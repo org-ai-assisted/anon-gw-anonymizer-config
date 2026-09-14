@@ -1,3 +1,6 @@
+## Copyright (C) 2018 - 2026 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
 rm_conffile /etc/tor/torrc.examples
 rm_conffile /etc/torrc.d/torrc.examples
 
@@ -11,3 +14,5 @@ rm_conffile /etc/audit/rules.d/30_anon-gw-anonymizer-config.rules
 ## tor-service-defaults-torrc.anondist.base now contains config for both
 ## workstation and gateway
 rm_conffile /etc/torrc.d/70_workstation.conf
+
+rm_conffile /etc/privleap/conf.d/anon-gw-anonymizer-config.conf
