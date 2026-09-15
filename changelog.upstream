@@ -1,9 +1,80 @@
+commit 0b13bc4d19b9af84cc8ee2e1778342e12116158f
+Merge: a1b9b30 9ab70c7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 14 02:40:30 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit 9ab70c7bae8b6f1946739caa26705bdac2a36d1a
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Sep 13 18:37:51 2026 -0400
+
+    Move privleap configuration to non-conffile location
+
+commit 5f8de4c29b975c3c311c9e9edff5e5fac3aebb64
+Merge: a1b9b30 ca59a5d
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Sep 13 17:04:40 2026 -0400
+
+    Merge branch 'ai' into arraybolt3/trixie
+
+commit ca59a5de31e5818988234f933b0f4cd5c918b5a7
+Merge: 6518da2 fc97b0d
+Author: claude <noreply@anthropic.com>
+Date:   Tue Sep 8 14:09:25 2026 -0400
+
+    Merge branch 'master' into ai
+
+commit fc97b0d8a1eeea3b2af78bb5d3c20999d7de57e7
+Merge: fed97a4 a1b9b30
+Author: claude <noreply@anthropic.com>
+Date:   Tue Sep 8 14:09:24 2026 -0400
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit a1b9b30a79d55099cb7a2edba0a1f1672ad6d63d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Sep 8 15:33:18 2026 +0000
+
+    bumped changelog version
+
 commit f62fd539567c17f8b051a009da00899b99d135b3
 Merge: aa61f05 5569a48
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Sep 8 10:20:00 2026 -0400
 
     Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit fed97a407f2f8a6da9ab2b95d361f66bc7a0a74b
+Merge: 648f7a1 6518da2
+Author: assisted-by-ai (Bot Account) (Machine Account) <228987186+assisted-by-ai@users.noreply.github.com>
+Date:   Mon Sep 7 22:13:13 2026 -0400
+
+    Merge pull request #6 from org-ai-assisted/ai
+
+    rename has.sh -> has.bsh (bashism convention)
+
+commit 6518da272048c924c31092d15aedb75e834f9d3a
+Author: claude (dev474 c7439536-fad8-4884-b71a-d2f3c4c23905) <noreply@anthropic.com>
+Date:   Mon Sep 7 11:45:02 2026 -0400
+
+    rename has.sh to has.bsh (bashism convention)
+
+    Sourced helper-scripts lib uses bashisms; .bsh marks it. Path-only edit.
+
+commit 648f7a1867dcca5d471dfef0f77b054896f66f03
+Merge: aa61f05 5569a48
+Author: claude (dev474 c7439536-fad8-4884-b71a-d2f3c4c23905) <noreply@anthropic.com>
+Date:   Mon Sep 7 11:45:02 2026 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit ea0b5dd3392c2e548a4d2edb526ef22044838258
+Merge: ababd1d 648f7a1
+Author: claude (dev474 c7439536-fad8-4884-b71a-d2f3c4c23905) <noreply@anthropic.com>
+Date:   Mon Sep 7 11:45:02 2026 -0400
+
+    Merge branch 'master' into ai
 
 commit 5569a48bdf49c4e711968c8ad8686be39b3c8395
 Merge: 39a1bf3 aa61f05
